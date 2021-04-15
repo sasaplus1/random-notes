@@ -5,23 +5,11 @@ set -euo pipefail
 __main() {
   unset -f __main
 
-  local template=$(cat <<-'EOB'
-		---
-		---
-		EOB
-  )
-
   local filename=
   filename=./notes/$(openssl rand -hex 4).md
 
-  if [ -f "$filename" ]
-  then
-    printf -- '%s\n' "$filename is already exists." >&2
-    return 1
-  else
-    printf -- '%b\n' "$template" > "$filename"
-    printf -- '%s\n' "$filename"
-  fi
+  touch "$filename"
+  printf -- '%s\n' "$filename"
 }
 __main "$@"
 
