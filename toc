@@ -16,6 +16,7 @@ __main() {
   {
     printf -- '%s\n\n' '# index'
 
+    # see: https://github.com/koalaman/shellcheck/wiki/SC2013
     awk -F : '{ print $2 }' < "$listfile" | while IFS= read -r note
     do
       printf -- '- [%s](%s)\n' "$(head -n 1 "$note" | sed -e 's/^# *//')" "${note##notes/}"
