@@ -10,13 +10,13 @@ __main() {
 
   for note in $(git ls-files ./notes ':!:./notes/README.md')
   do
-    printf -- '%s:%s\n' $(git log --pretty='format:%at' --reverse "$note" | head -1) "$note"
+    printf -- '%s:%s\n' "$(git log --pretty='format:%at' --reverse "$note" | head -1)" "$note"
   done | sort --numeric-sort --reverse > "$listfile"
 
   {
     printf -- '%s\n\n' '# index'
 
-    for note in $(awk -F : '{ print $2 }' < "$listfile")
+    awk -F : '{ print $2 }' < "$listfile" | while IFS= read -r note
     do
       printf -- '- [%s](%s)\n' "$(head -n 1 "$note" | sed -e 's/^# *//')" "${note##notes/}"
     done
