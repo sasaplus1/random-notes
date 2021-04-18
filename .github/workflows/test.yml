@@ -1,0 +1,21 @@
+name: test
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  lint:
+    name: lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: docker://koalaman/shellcheck:stable
+        with:
+          args: >
+            new
+            toc
+      - run: ./toc
+      - run: git diff --exit-code
