@@ -10,6 +10,14 @@ execute below:
 $ ./new
 ```
 
+## How to create note index
+
+execute below:
+
+```console
+$ ./toc
+```
+
 ## License
 
 The MIT license.
