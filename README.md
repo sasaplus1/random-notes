@@ -12,6 +12,12 @@ execute below:
 $ ./new
 ```
 
+if you want to edit after create:
+
+```console
+$ $EDITOR $(./new)
+```
+
 ## How to create note index
 
 execute below:
