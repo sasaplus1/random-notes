@@ -1,5 +1,6 @@
 # index
 
+- [BashでPATH環境変数に重複しているパスを追加しない関数を作る](3271337f.md)
 - [PostCSSでCSS Modulesのクラス名に変換する](ae443a97.md)
 - [新たに知ったpatchコマンドとsortコマンドのオプション](86557845.md)
 - [ghコマンドでReleasesに配置されたファイルをダウンロードする](08a15cee.md)
