@@ -1,5 +1,6 @@
 # index
 
+- [Power Assertを使ったユニットテストをTypeScriptで書きそれをKarmaからMochaで実行する](ac906bee.md)
 - [MacBookのタッチバーのプロセスを再起動する](5ac61b3b.md)
 - [contenteditableに向き合う](7ff50473.md)
 - [ダム端末あるいはインタラクティブシェルかどうかを判定する](547ccae9.md)
